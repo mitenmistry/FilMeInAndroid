@@ -30,6 +30,8 @@ import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
 
 
 
@@ -224,5 +226,10 @@ public class DisplayMessageService extends Service /*implements AsyncResponse*/{
 	public void setActivity(DisplayMessageActivity parent) {
 		// TODO Auto-generated method stub
 		this.parent = parent;
+	}
+	
+	public void playPause(View view) {
+	    // Do something in response to button
+		Log.i("ddd","ddddddddddddddddd");
 	}
 }

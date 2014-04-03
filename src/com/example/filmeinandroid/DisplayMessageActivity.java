@@ -35,7 +35,7 @@ public class DisplayMessageActivity extends Activity {
     private DisplayMessageActivity parent = this;
     private Timer heartBeat = null;
     private int i = 0;
-    
+    private TextView subDisplay;
     private JSONObject jsonObj;
     private boolean isBlank = true;
     private long previousEnd = -1;
@@ -101,15 +101,17 @@ public class DisplayMessageActivity extends Activity {
     	// Get the message from the intent
     	Intent intent = getIntent();
     	String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-    	
+    	Log.i("pppp", "1111111111111");
+    	subDisplay = (TextView) findViewById(R.id.textView2);
+    	Log.i("qqqq", "222222222222222222");
     	// Create the text view
-    	TextView textView = new TextView(this);
-    	textView.setTextSize(40);
-    	textView.setText(message);
-    	
+    	//TextView textView = new TextView(this);
+    	subDisplay.setTextSize(40);
+    	subDisplay.setText(message);
+    	Log.i("rrrr", "33333333333333333");
     	// Set the text view as the activity layout
-    	setContentView(textView);
-    	start();
+    	//setContentView(textView);
+    	//start();
     	
     	
     	
@@ -138,12 +140,12 @@ public class DisplayMessageActivity extends Activity {
 
 	public void setText(String content) {
 		// TODO Auto-generated method stub
-		TextView textView = new TextView(this);
-    	textView.setTextSize(40);
-    	textView.setText(content);
+		//TextView textView = new TextView(this);
+    	subDisplay.setTextSize(40);
+    	subDisplay.setText(content);
     	
     	// Set the text view as the activity layout
-    	setContentView(textView);
+    	//setContentView(textView);
 	}
 	
 	private void start() {
